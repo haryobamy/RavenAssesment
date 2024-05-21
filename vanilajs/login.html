@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User | Login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <div class="auth_container">
+      <h1>Auth Screen</h1>
+      <form id="authForm" class="auth_form">
+        <div class="input__wrapper">
+          <label class="input__label" for="email">Email</label>
+          <input
+            class="input__field"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Please Enter your Email"
+            required
+          />
+        </div>
+
+        <button class="auth__button" type="submit">Submit</button>
+      </form>
+      <div id="userInfo" class="user__info">
+        <h2>Gravatar</h2>
+        <img
+          id="gravatar"
+          src=""
+          alt="Gravatar"
+          class="auth-screen__gravatar"
+        />
+        <h2>GitHub Repositories</h2>
+        <ul id="repos" class="auth-screen__repos"></ul>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js
+"></script>
+  </body>
+</html>

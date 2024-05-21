@@ -1,0 +1,101 @@
+//login css
+
+:root {
+  --primary: #007fff;
+  --secondary: #6f7e8c;
+  --hover: #f5f5f5;
+  --text: #212121;
+  --headerBackground: #1c2127;
+}
+
+/* Atomic Design Principle and BEM Convention */
+
+/* Base Styles */
+body {
+  font-family: 'Satoshi', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2a2a2a;
+  color: #ddd;
+}
+
+.auth_container {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.auth_form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input__wrapper {
+  position: relative;
+  padding: 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input__field {
+  border: 0;
+  border-bottom: 2px solid ghostwhite;
+  outline: 0;
+  font-size: 1rem;
+  color: var(--text);
+  padding: 0.25rem 2px;
+  padding-right: 2rem;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input__field::placeholder {
+  color: transparent;
+}
+
+.input__field:placeholder-shown ~ .input__label {
+  color: ghostwhite;
+  font-size: 1rem;
+  cursor: text;
+  top: 1.25rem;
+}
+
+.auth__button {
+  margin-top: 1rem;
+  padding: 7px;
+  outline: none;
+  border: none;
+  background-color: gray;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+.user__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-screen__gravatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.auth-screen__repos {
+  list-style: none;
+  padding: 0;
+}
+
+.auth-screen__repos li {
+  padding: 5px 0;
+}
