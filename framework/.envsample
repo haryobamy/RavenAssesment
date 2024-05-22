@@ -1,0 +1,3 @@
+VITE_API_KEY= api key from https://docs.coingecko.com/v3.0.1
+
+VITE_BASE_URL=base uurl from https://docs.coingecko.com/v3.0.1
