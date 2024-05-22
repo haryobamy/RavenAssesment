@@ -2,16 +2,42 @@ import './chart.css';
 import ReactApexChart from 'react-apexcharts';
 import dayjs from 'dayjs';
 import { chartInterval, sampleData, seriesDataLinear } from './chartData';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { FiMaximize2 } from 'react-icons/fi';
 import { BiUndo } from 'react-icons/bi';
 import { FaChartLine } from 'react-icons/fa6';
+import { useSelector } from 'react-redux';
+import { useLazyGetCoinChartQuery } from '../../constant/redux/Coin/coinapi';
 
 function Chart() {
+  const { baseCurrency, selectedCoin } = useSelector((state) => state?.coins);
+  const [getCoinChart, { data }] = useLazyGetCoinChartQuery();
   const [activeTime, setActiveTime] = useState('1h');
+
+  useEffect(() => {
+    getCoinChart({
+      id: selectedCoin?.id,
+      currency: baseCurrency,
+      days: 2,
+    });
+  }, [getCoinChart, selectedCoin, baseCurrency]);
+
+  console.log({ data });
+
+  const transformPriceData = data?.prices?.map((entry) => {
+    const [timestamp, openPrice, highPrice, lowPrice, closePrice] = entry;
+
+    return {
+      x: new Date(timestamp),
+      y: [openPrice, highPrice, lowPrice, closePrice],
+    };
+  });
+
+  console.log({ transformPriceData });
+
   const series = [
     {
-      data: sampleData[activeTime],
+      data: transformPriceData,
     },
   ];
 
@@ -164,21 +190,24 @@ function Chart() {
       </div>
       <div className="divider" />
       <div className="chart-section__info">
-        <span className="chart-section__info-item">BTC/USD</span>
+        <span className="chart-section__info-item">
+          {selectedCoin?.symbol?.toUpperCase()}/{baseCurrency.toUpperCase()}
+        </span>
         <p className="chart-section__info-item">
           O <span>66,567</span>
         </p>
         <p className="chart-section__info-item">
-          H <span>760,990</span>
+          H <span>{selectedCoin?.high_24h}</span>
         </p>
         <p className="chart-section__info-item">
-          L <span>200,969</span>
+          L <span>{selectedCoin?.low_24h}</span>
         </p>
         <p className="chart-section__info-item">
           C <span>56,669</span>
         </p>
         <p className="chart-section__info-item">
-          Change <span>2.44%</span>
+          Change{' '}
+          <span>{selectedCoin?.price_change_percentage_24h?.toFixed(2)}%</span>
         </p>
         <p className="chart-section__info-item">
           Amplitude <span>65.7%</span>

@@ -12,15 +12,27 @@ export const coinApi = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
           const res = await queryFulfilled;
-          console.log({ res });
-          const result = res?.data.data;
+          const result = res?.data;
           dispatch(setCoins(result));
         } catch (error) {
           console.log(error, '::erroor');
         }
       },
     }),
+
+    getCoinChart: builder.query({
+      query: ({ id, currency, days = '1' }) => ({
+        //url: `coins/${id}/market_chart?vs_currency=${currency}&days=${days}&precision=2`,
+        url: `coins/${id}/ohlc?vs_currency=${currency}&days=${days}&precision=2`,
+        method: 'GET',
+      }),
+    }),
   }),
 });
 
-export const { useGetCoinsQuery, useLazyGetCoinsQuery } = coinApi;
+export const {
+  useGetCoinsQuery,
+  useLazyGetCoinsQuery,
+  useLazyGetCoinChartQuery,
+  useGetCoinChartQuery,
+} = coinApi;

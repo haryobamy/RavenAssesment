@@ -1,11 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './customSelect.css';
 import PropTypes from 'prop-types';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 
 function CustomSelect({ options, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(options?.[0] || null);
+
+  const [selectedOption, setSelectedOption] = useState(options?.[0]);
+
+  useEffect(() => {
+    setSelectedOption(options[0]);
+  }, [options]);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
