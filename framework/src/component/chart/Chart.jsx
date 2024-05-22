@@ -2,8 +2,10 @@ import './chart.css';
 import ReactApexChart from 'react-apexcharts';
 import dayjs from 'dayjs';
 import { chartInterval, sampleData, seriesDataLinear } from './chartData';
-import { useState } from 'react';
-import { useCallback } from 'react';
+import { useState, useCallback } from 'react';
+import { FiMaximize2 } from 'react-icons/fi';
+import { BiUndo } from 'react-icons/bi';
+import { FaChartLine } from 'react-icons/fa6';
 
 function Chart() {
   const [activeTime, setActiveTime] = useState('1h');
@@ -147,13 +149,17 @@ function Chart() {
         </div>
         <div className="chart-section__tools">
           <button className="chart-section__tool-button">
-            <i className="fas fa-bar-chart" aria-hidden="true"></i>
+            <FaChartLine />
           </button>
           <button className="chart-section__tool-button">Fx Indicators</button>
-          <button className="chart-section__tool-button"></button>
+          <button className="chart-section__tool-button">
+            <BiUndo />
+          </button>
         </div>
         <div className="chart-section__maximize">
-          <button className="chart-section__maximize-button">Maximize</button>
+          <button className="chart-section__maximize-button">
+            <FiMaximize2 />
+          </button>
         </div>
       </div>
       <div className="divider" />

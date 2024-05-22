@@ -33,6 +33,9 @@
 }
 .currency_change {
   color: #00c076;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .currency-details > span {
@@ -55,4 +58,12 @@
 
 .currency-details__container {
   display: flex;
+}
+
+.currency__icon {
+  display: flex;
+  align-items: center;
+}
+.currency__icon-base-currency {
+  margin-left: -15px;
 }
