@@ -1,0 +1,117 @@
+.buy-section {
+  flex: 2;
+  min-width: 300px;
+
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.buy-section__controls-container {
+  height: 40px;
+  background-color: #1c1c1c;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+}
+
+.buy-section__controls {
+  display: flex;
+  background-color: #1c1c1c;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.buy-section__order-book {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-section__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.buy-section__filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buy-section__filter-container img {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buy-section__active-filter {
+  background-color: #353945;
+}
+
+.buy-section__range-selector {
+  width: 60px;
+  background-color: #353945;
+  padding: 4px 8px 4px 8px;
+}
+
+.buy-section__range-selector select {
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+
+//order table
+.order-book__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-book__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.order-book__row--header {
+  border-bottom: 1px solid #3a3f47;
+}
+
+.order-book__row--sell {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.order-book__row--buy {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+.order-book__cell {
+  flex: 1;
+  text-align: center;
+}
+
+.order-book__badge {
+  display: inline-block;
+  padding: 2px 5px;
+  background-color: #7e57c2;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #fff;
+}
+
+.order-book__cell--price-green {
+  color: #4caf50;
+}

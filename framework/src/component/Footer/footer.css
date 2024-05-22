@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1c1c1c;
+}
+
+.footer__text {
+  font-size: 14px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer__social-icon {
+  font-size: 14px;
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.footer__contact {
+  font-size: 14px;
+  background-color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}

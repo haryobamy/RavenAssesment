@@ -1,0 +1,97 @@
+.chart-section {
+  flex: 6;
+  min-width: 300px;
+  background-color: #1c1c1c;
+  padding: 5px 15px;
+  border-radius: 10px;
+}
+
+.chart-section__header {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  color: #ddd;
+}
+.chart-section__time-label {
+  margin-right: 10px;
+}
+
+.chart-section__maximize {
+  display: flex;
+  justify-content: flex-end;
+
+  flex: 1;
+}
+
+.chart-section__interval-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.chart-section__interval-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #ddd;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.chart-section__tool-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #ddd;
+  text-transform: capitalize;
+}
+
+.chart-section__tools {
+  display: flex;
+  gap: 10px;
+}
+
+.chart-section__interval-button--active {
+  background-color: #a7b1bc;
+  border-radius: 20px;
+  padding: 4px 10px;
+}
+
+.chart-section__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0px 10px;
+}
+
+.chart-section__info-item {
+  font-size: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.chart-section__info-item span {
+  color: #00c076;
+  margin-left: 5px;
+}
+
+.chart-section__title {
+  font-size: 24px;
+}
+
+.chart-section__stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.chart-section__stat {
+  font-size: 14px;
+}
+
+.chart-section__stat-change {
+  color: #4caf50;
+}
+
+.chart-section__chart {
+  width: 100%;
+  /* height: 350px; */
+}

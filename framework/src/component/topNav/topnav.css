@@ -1,0 +1,58 @@
+.currency-info {
+  background-color: #20252b;
+  height: 80px;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.currency-selector_container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.currency-selector select {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  font-size: 24px;
+  font-weight: 500;
+  border: none;
+}
+
+.currency-rate {
+  color: #00c076;
+}
+
+.currency-details {
+  border-left: 1px solid gray;
+  padding: 0px 40px;
+}
+.currency_change {
+  color: #00c076;
+}
+
+.currency-details > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.currency-details > p {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: white;
+}
+
+.currency-details__container {
+  display: flex;
+}

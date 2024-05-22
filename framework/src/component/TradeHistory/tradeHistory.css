@@ -1,0 +1,57 @@
+.history-section {
+  border: 1px solid #20252b;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #20252b;
+  margin-top: 10px;
+}
+
+.history-section__controls-container {
+  height: 40px;
+  background-color: #1c1c1c;
+  padding-right: 3px;
+  padding-left: 3px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  border-radius: 10px;
+}
+
+.history-section__controls {
+  display: flex;
+  background-color: #1c1c1c;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.history-section__buy-sell {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.history-section__button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  color: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.history-section__button--active {
+  background-color: #333;
+  color: #fff;
+}
+
+.history-section__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
